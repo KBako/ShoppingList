@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 // This is a test comment :)
+//Secon test
 
 public class MainActivity extends AppCompatActivity {
 

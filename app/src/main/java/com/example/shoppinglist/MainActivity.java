@@ -18,6 +18,8 @@ import com.example.shoppinglist.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 
+// This is a test comment :)
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;

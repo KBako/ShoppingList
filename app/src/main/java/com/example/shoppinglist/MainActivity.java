@@ -20,7 +20,7 @@ import android.view.MenuItem;
 
 // This is a test comment :)
 //Secon test
-
+//adding a comment underneath
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;

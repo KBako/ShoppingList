@@ -21,6 +21,9 @@ import android.view.MenuItem;
 // This is a test comment :)
 //Secon test
 //adding a comment underneath
+
+// Further comment to test!!
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.shoppinglist.FirstFragment"
+        android:name="com.example.shoppinglist.NewList"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_New_List">
 
         <action
             android:id="@+id/action_FirstFragment_to_MainMenu"

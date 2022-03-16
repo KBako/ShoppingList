@@ -6,23 +6,23 @@
     app:startDestination="@id/mainMenu">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/NewList"
         android:name="com.example.shoppinglist.NewList"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_New_List">
+        android:label="@string/new_list_label"
+        tools:layout="@layout/fragment_new_list">
 
         <action
-            android:id="@+id/action_FirstFragment_to_MainMenu"
+            android:id="@+id/action_NewList_to_MainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.shoppinglist.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/ListLibrary"
+        android:name="com.example.shoppinglist.ListLibrary"
+        android:label="@string/list_library_label"
+        tools:layout="@layout/fragment_list_library">
 
         <action
-            android:id="@+id/action_SecondFragment_to_MainMenu"
+            android:id="@+id/action_ListLibrary_to_MainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
 
@@ -33,12 +33,12 @@
         tools:layout="@layout/fragment_main_menu">
 
         <action
-            android:id="@+id/action_mainMenu_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_mainMenu_to_new_list"
+            app:destination="@id/NewList" />
 
         <action
-            android:id="@+id/action_mainMenu_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_mainMenu_to_ListLibrary"
+            app:destination="@id/ListLibrary" />
 
     </fragment>
 </navigation>

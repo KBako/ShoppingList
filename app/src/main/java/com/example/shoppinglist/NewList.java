@@ -33,7 +33,7 @@ public class NewList extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(NewList.this)
-                        .navigate(R.id.action_FirstFragment_to_MainMenu);
+                        .navigate(R.id.action_NewList_to_MainMenu);
             }
         });
     }

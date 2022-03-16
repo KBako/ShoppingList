@@ -9,11 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.shoppinglist.databinding.FragmentSecondBinding;
+import com.example.shoppinglist.databinding.FragmentListLibraryBinding;
 
 public class ListLibrary extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private FragmentListLibraryBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +21,7 @@ public class ListLibrary extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentListLibraryBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -33,7 +33,7 @@ public class ListLibrary extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ListLibrary.this)
-                        .navigate(R.id.action_SecondFragment_to_MainMenu);
+                        .navigate(R.id.action_ListLibrary_to_MainMenu);
             }
         });
     }

@@ -51,19 +51,19 @@ public class MainMenu extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.firstButton.setOnClickListener(new View.OnClickListener() {
+        binding.newListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(MainMenu.this)
-                        .navigate(R.id.action_mainMenu_to_FirstFragment);
+                        .navigate(R.id.action_mainMenu_to_new_list);
             }
         });
 
-        binding.secondButton.setOnClickListener(new View.OnClickListener() {
+        binding.listLibraryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(MainMenu.this)
-                        .navigate(R.id.action_mainMenu_to_SecondFragment);
+                        .navigate(R.id.action_mainMenu_to_ListLibrary);
             }
         });
     }

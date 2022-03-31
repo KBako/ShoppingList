@@ -24,7 +24,7 @@ public class listTest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        et = (EditText) findViewById(R.id.editText);
+        et = (EditText) findViewById(R.id.edittext);
         bt = (Button) findViewById(R.id.button_addData);
         lv = (ListView) findViewById(R.id.listView_lv);
 

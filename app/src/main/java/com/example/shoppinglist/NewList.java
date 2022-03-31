@@ -9,9 +9,19 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 
 //import com.example.shoppinglist.databinding.FragmentMainMenuBinding;
 import com.example.shoppinglist.databinding.FragmentNewListBinding;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+
+
+import java.util.ArrayList;
 
 
 /**
@@ -20,6 +30,12 @@ import com.example.shoppinglist.databinding.FragmentNewListBinding;
  * create an instance of this fragment.
  */
 public class NewList extends Fragment {
+
+    EditText et;
+    Button bt;
+    ListView lv;
+    ArrayList<String> arrayList;
+    ArrayAdapter<String> adapter;
 
     private FragmentNewListBinding binding;
 
@@ -37,7 +53,9 @@ public class NewList extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -52,17 +70,28 @@ public class NewList extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        et = (EditText) view.findViewById(R.id.edittext);
+        bt = (Button) view.findViewById(R.id.button_addData);
+        lv = (ListView) view.findViewById(R.id.listView_lv);
+
+        arrayList = new ArrayList<String>();
+        adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
+        lv.setAdapter(adapter);
+
         binding.buttonX.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                NavHostFragment.findNavController(NewList.this)
+                        .navigate(R.id.action_NewList_to_MainMenu);
             }
         });
 
         binding.buttonAddData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                String result = et.getText().toString();
+                arrayList.add(result);
+                adapter.notifyDataSetChanged();
             }
         });
     }

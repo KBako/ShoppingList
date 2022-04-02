@@ -50,8 +50,7 @@
         android:ems="10"
         android:hint="@string/enter_item_name"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="@string/name" />
+        android:minHeight="48dp" />
 
     <ListView
         android:id="@+id/listView_lv"

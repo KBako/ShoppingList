@@ -92,6 +92,8 @@ public class NewList extends Fragment {
                 String result = et.getText().toString();
                 arrayList.add(result);
                 adapter.notifyDataSetChanged();
+                String empty_st = "";
+                et.setText(empty_st);
             }
         });
     }

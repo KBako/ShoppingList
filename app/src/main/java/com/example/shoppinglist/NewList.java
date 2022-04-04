@@ -1,5 +1,6 @@
 package com.example.shoppinglist;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -94,6 +95,9 @@ public class NewList extends Fragment {
                 adapter.notifyDataSetChanged();
                 String empty_st = "";
                 et.setText(empty_st);
+
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -1,4 +1,4 @@
-package com.example.shoppingapp2;
+package com.example.shoppinglist;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +31,24 @@ public class AddActivity extends Fragment {
 
     private ActivityAddBinding binding;
 
+    public AddActivity(){
+
+    }
+
+    public static AddActivity newInstance(String param1, String param2) {
+        AddActivity fragment = new AddActivity();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,10 +62,10 @@ public class AddActivity extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        item_input = findViewById(R.id.item_input);
-        item_price = findViewById(R.id.item_price);
-        item_quantity = findViewById(R.id.item_quantity);
-        add_button = findViewById(R.id.add_button);
+        item_input = view.findViewById(R.id.item_input);
+        item_price = view.findViewById(R.id.item_price);
+        item_quantity = view.findViewById(R.id.item_quantity);
+        add_button = view.findViewById(R.id.add_button);
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,11 +75,5 @@ public class AddActivity extends Fragment {
                         Integer.valueOf(item_quantity.getText().toString().trim()));
             }
         });
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
     }
 }

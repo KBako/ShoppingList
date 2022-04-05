@@ -44,10 +44,10 @@ public class AddActivity extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        item_input = findViewById(R.id.item_input);
-        item_price = findViewById(R.id.item_price);
-        item_quantity = findViewById(R.id.item_quantity);
-        add_button = findViewById(R.id.add_button);
+        item_input = view.findViewById(R.id.item_input);
+        item_price = view.findViewById(R.id.item_price);
+        item_quantity = view.findViewById(R.id.item_quantity);
+        add_button = view.findViewById(R.id.add_button);
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -54,13 +54,12 @@ public class AddActivity extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_main_menu, container, false);
-        binding = ActivityAddBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View rootView = inflater.inflate(R.layout.activity_add, container, false);
+        return rootView;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setContentView(R.layout.activity_add);
 
         item_input = view.findViewById(R.id.item_input);
         item_price = view.findViewById(R.id.item_price);

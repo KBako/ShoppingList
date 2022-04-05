@@ -20,7 +20,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_PRICE = "list_price";
     private static final String COLUMN_QUANTITY = "list_quantity";
 
-    public MyDatabaseHelper(@Nullable Context context) {
+    public MyDatabaseHelper(@Nullable AddActivity context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }

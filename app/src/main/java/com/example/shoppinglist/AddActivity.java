@@ -1,4 +1,4 @@
-package com.example.shoppingapp2;
+package com.example.shoppinglist;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,18 +31,35 @@ public class AddActivity extends Fragment {
 
     private ActivityAddBinding binding;
 
+    public AddActivity(){
+
+    }
+
+    public static AddActivity newInstance(String param1, String param2) {
+        AddActivity fragment = new AddActivity();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_main_menu, container, false);
-        binding = ActivityAddBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View rootView = inflater.inflate(R.layout.activity_add, container, false);
+        return rootView;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setContentView(R.layout.activity_add);
 
         item_input = view.findViewById(R.id.item_input);
         item_price = view.findViewById(R.id.item_price);
@@ -57,11 +74,5 @@ public class AddActivity extends Fragment {
                         Integer.valueOf(item_quantity.getText().toString().trim()));
             }
         });
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
     }
 }
